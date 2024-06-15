@@ -14,6 +14,7 @@ const Accordion = () => {
     }
     return (
         <div className="accordion">
+            <h1>Open Single Accordion</h1>
             {
                 data.map((item) => (
                     <div className="item" key={item.id}>

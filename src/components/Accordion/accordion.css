@@ -5,6 +5,10 @@
   padding: 1rem;
   border-radius: 10px;
 }
+.accordion h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
 
 .accordion .item {
   border-bottom: 2px solid;

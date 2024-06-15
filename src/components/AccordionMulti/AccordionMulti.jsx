@@ -20,6 +20,7 @@ const AccordionMulti = () => {
 
     return (
         <div className='accordion'>
+            <h1>Open Multiple Accordion</h1>
             {data.map((item) => (
                 <div className="item" key={item.id}>
                     <h2 onClick={() => handleAccordion(item.id)}>{item.question}</h2>
