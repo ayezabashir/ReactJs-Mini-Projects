@@ -16,7 +16,7 @@ const StarRating = ({ starsCount = 5 }) => {
     }
 
     const handleMouseLeave = () => {
-        setHover(0)
+        setHover(rating)
     }
 
 
@@ -26,7 +26,7 @@ const StarRating = ({ starsCount = 5 }) => {
                 [...Array(starsCount)].map((_, index) => {
                     index += 1; // so star's 1st index start from 1 and not from 0
                     return <FaStar
-                        className={rating >= index || hover >= index ? 'fill' : null}
+                        className={rating >= index || hover >= index ? 'fill' : 'null'}
                         key={index}
                         width={40}
                         onClick={() => handleClick(index)}
