@@ -1,14 +1,19 @@
 .tree-view-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  width: 350px;
+  background: #000;
+  color: #fff;
 }
 
-ul,
-li {
-  text-decoration: none;
-  list-style: none;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
 }
-li {
-  margin: 10px auto;
+
+.menu-list-container {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
