@@ -1,0 +1,14 @@
+.tree-view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+li {
+  margin: 10px auto;
+}
