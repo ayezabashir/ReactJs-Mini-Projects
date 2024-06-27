@@ -1,5 +1,6 @@
 import './App.css'
-import QRCodeGenerator from './components/QRGenerator/QRCodeGenerator'
+import SwitchThemes from './components/SwitchThemes/SwitchThemes'
+// import QRCodeGenerator from './components/QRGenerator/QRCodeGenerator'
 // import TreeView from './components/Tree View/TreeView'
 // import sideMenu from './components/Tree View/data'
 // import Accordion from './components/Accordion/Accordion'
@@ -21,8 +22,9 @@ function App() {
       <StarRating starsCount={10} />
       <Slider url={'https://picsum.photos/v2/list'} page={'1'} limit={'5'} />
       <LoadMore /> 
-      <TreeView menus={sideMenu} /> */}
-      <QRCodeGenerator />
+      <TreeView menus={sideMenu} /> 
+      <QRCodeGenerator /> */}
+      <SwitchThemes />
 
     </>
   )

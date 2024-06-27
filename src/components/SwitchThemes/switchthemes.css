@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.modesBtn {
+  padding: 0.5rem 2rem;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container.dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+  .modesBtn {
+    background: #fff;
+    color: #000;
+  }
+}
