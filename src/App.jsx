@@ -1,6 +1,7 @@
 import './App.css'
-import TreeView from './components/Tree View/TreeView'
-import sideMenu from './components/Tree View/data'
+import QRCodeGenerator from './components/QRGenerator/QRCodeGenerator'
+// import TreeView from './components/Tree View/TreeView'
+// import sideMenu from './components/Tree View/data'
 // import Accordion from './components/Accordion/Accordion'
 // import AccordionMulti from './components/AccordionMulti/AccordionMulti'
 // import RandomColour from './components/RandomColour/RandomColour'
@@ -19,8 +20,10 @@ function App() {
       <RandomRgbColour />
       <StarRating starsCount={10} />
       <Slider url={'https://picsum.photos/v2/list'} page={'1'} limit={'5'} />
-      <LoadMore /> */}
-      <TreeView menus={sideMenu} />
+      <LoadMore /> 
+      <TreeView menus={sideMenu} /> */}
+      <QRCodeGenerator />
+
     </>
   )
 }
