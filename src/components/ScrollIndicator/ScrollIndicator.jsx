@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 const ScrollIndicator = ({ url }) => {
     const [data, setData] = useState([]);
+    const [scroll, setScroll] = useState(0)
 
     async function fetchData(getUrl) {
         try {
@@ -18,13 +19,32 @@ const ScrollIndicator = ({ url }) => {
             console.log(e);
         }
     }
+
+    const handleScroll = () => {
+        const scrollAmount = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        setScroll((scrollAmount / height) * 100)
+
+    }
+
     useEffect(() => {
         fetchData(url);
     }, [url])
 
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', () => { })
+        }
+    }, [])
+
     return (
         <div className='container'>
-            <h1>Scroll Indicator</h1>
+            <div className="progress-container">
+                <div className="scroll-progress">
+                    <div className="progress-bar" style={{ width: `${scroll}%` }}></div>
+                </div>
+            </div>
             <div className='data-container'>
                 {
                     data && data.length > 0 ?
