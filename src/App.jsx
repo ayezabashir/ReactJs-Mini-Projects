@@ -1,5 +1,6 @@
 import './App.css'
-import SwitchThemes from './components/SwitchThemes/SwitchThemes'
+import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator'
+// import SwitchThemes from './components/SwitchThemes/SwitchThemes'
 // import QRCodeGenerator from './components/QRGenerator/QRCodeGenerator'
 // import TreeView from './components/Tree View/TreeView'
 // import sideMenu from './components/Tree View/data'
@@ -23,8 +24,9 @@ function App() {
       <Slider url={'https://picsum.photos/v2/list'} page={'1'} limit={'5'} />
       <LoadMore /> 
       <TreeView menus={sideMenu} /> 
-      <QRCodeGenerator /> */}
-      <SwitchThemes />
+      <QRCodeGenerator /> 
+      <SwitchThemes /> */}
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
 
     </>
   )
