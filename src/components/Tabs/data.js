@@ -43,7 +43,7 @@ const tabContent = [
         content: [
             {
                 heading: 'Help Center',
-                text: '>Learn how to sign up, install and see our products.'
+                text: 'Learn how to sign up, install and see our products.'
             },
             {
                 heading: 'Podcasts',

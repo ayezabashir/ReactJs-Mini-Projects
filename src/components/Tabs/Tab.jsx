@@ -1,7 +1,10 @@
 import Tabs from "./Tabs"
 import tabContent from "./data"
 const Tab = () => {
-    return <Tabs tabsContent={tabContent} />
+    const handleChange = (currentTabIndex) => {
+        console.log(currentTabIndex)
+    }
+    return <Tabs tabsContent={tabContent} onChange={handleChange} />
 }
 
 export default Tab

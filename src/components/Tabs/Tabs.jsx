@@ -2,16 +2,21 @@
 import { useState } from 'react'
 import './tabs.css'
 
-const Tabs = ({ tabsContent, handleChange }) => {
+const Tabs = ({ tabsContent, onChange }) => {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
+
+    const handleOnClick = (getCurrentIndex) => {
+        setCurrentTabIndex(getCurrentIndex)
+        onChange(getCurrentIndex);
+    }
 
     return (
         <div className='tab-container'>
             <div className="tab-heading">
                 {
-                    tabsContent.map((item) => (
-                        <div key={item.id}>
-                            <span className="label">{item.label}</span>
+                    tabsContent.map((item, index) => (
+                        <div className='heading' onClick={() => handleOnClick(index)} key={item.id}>
+                            <span className={`label ${currentTabIndex === index ? 'active' : null}`}>{item.label}</span>
                         </div>
                     ))
                 }
@@ -23,7 +28,7 @@ const Tabs = ({ tabsContent, handleChange }) => {
                     tabsContent[currentTabIndex].content
                     &&
                     tabsContent[currentTabIndex].content.map((item) => (
-                        <div key={item.heading}>
+                        <div className='content' key={item.heading}>
                             <h3>{item.heading}</h3>
                             <p>{item.text}</p>
                         </div>
