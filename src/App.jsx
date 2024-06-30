@@ -1,5 +1,6 @@
 import './App.css'
-import Tab from './components/Tabs/Tab'
+import Modal from './components/ModalBox/Modal'
+// import Tab from './components/Tabs/Tab'
 // import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator'
 // import SwitchThemes from './components/SwitchThemes/SwitchThemes'
 // import QRCodeGenerator from './components/QRGenerator/QRCodeGenerator'
@@ -27,8 +28,9 @@ function App() {
       <TreeView menus={sideMenu} /> 
       <QRCodeGenerator /> 
       <SwitchThemes />
-      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />  */}
-      <Tab />
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />  
+      <Tab /> */}
+      <Modal />
 
     </>
   )
