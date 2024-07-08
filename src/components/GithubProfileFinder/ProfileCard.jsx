@@ -13,30 +13,30 @@ const ProfileCard = ({ user }) => {
   const createdDate = new Date(created_at);
   return (
     <div className="profile-container">
-      <div>
+      <div className="img">
         <img src={avatar_url} alt={name} />
       </div>
-      <div>
+      <div className="user-info">
         <a href={`https://github.com/${login}`}>{name || login}</a>
         <p>
           Joined on:{" "}
-          {`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
-            month: "short",
-          })} ${createdDate.getFullYear()}`}{" "}
+          <b>
+            {`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
+              month: "short",
+            })} ${createdDate.getFullYear()}`}{" "}
+          </b>
         </p>
-      </div>
-      <div>
-        <div>
+        <div className="info">
           <p>Public Repositories: </p>
-          <p>{public_repos}</p>
+          <b>{public_repos}</b>
         </div>
-        <div>
+        <div className="info">
           <p>Followers: </p>
-          <p> {followers} </p>
+          <b> {followers} </b>
         </div>
-        <div>
+        <div className="info">
           <p>Following</p>
-          <p>{following}</p>
+          <b>{following}</b>
         </div>
       </div>
     </div>
