@@ -1,5 +1,6 @@
 import './App.css'
-import Modal from './components/ModalBox/Modal'
+import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
+// import Modal from './components/ModalBox/Modal'
 // import Tab from './components/Tabs/Tab'
 // import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator'
 // import SwitchThemes from './components/SwitchThemes/SwitchThemes'
@@ -29,8 +30,9 @@ function App() {
       <QRCodeGenerator /> 
       <SwitchThemes />
       <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />  
-      <Tab /> */}
-      <Modal />
+      <Tab /> 
+      <Modal />*/}
+      <GithubProfileFinder />
 
     </>
   )
