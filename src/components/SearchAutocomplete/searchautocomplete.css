@@ -12,6 +12,22 @@
   gap: 20px;
   width: 100%;
 }
+h2 {
+  color: black;
+}
+h3 {
+  color: rgb(254, 143, 162);
+}
+h3,
+h2 {
+  margin: 0;
+}
+b {
+  color: rgb(254, 143, 162);
+}
+p {
+  margin: 10px 0;
+}
 
 input {
   width: inherit;
@@ -21,7 +37,10 @@ input {
   border-bottom: 2px solid pink;
   font-size: 20px;
 }
-
+img {
+  width: 100%;
+  height: 100%;
+}
 button {
   background: pink;
   color: black;
@@ -34,4 +53,33 @@ button {
     cursor: pointer;
     background: rgb(253, 134, 154);
   }
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info .user {
+  border-bottom: 2px solid pink;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 0.5rem 2rem;
+}
+
+.user .img {
+  border: 5px solid pink;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user .info .flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

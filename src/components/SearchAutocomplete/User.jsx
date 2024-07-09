@@ -8,27 +8,27 @@ const User = ({ users }) => {
             <img src={item.image} alt={item.firstName} />
           </div>
           <div className="info">
-            <p>
+            <p className="flex">
               Full Name:
               <h3>
                 {item.firstName} {item.lastName}
               </h3>
             </p>
-            <p>
+            <p className="flex">
               Age:
-              <h2>{item.age}</h2>
+              <h3>{item.age}</h3>
             </p>
             <p>
               Birthday: <b>{item.birthDate}</b>
             </p>
-            <small>
+            <p>
               Blood Group: <b>{item.bloodGroup}</b>
-            </small>
+            </p>
             <p>
               Univeristy: <b>{item.university}</b>
             </p>
             <div className="contact-info">
-              <h3>Contact {item.firstName}</h3>
+              <h2>Contact {item.firstName}</h2>
               <p>
                 Contact: <b>{item.phone}</b>
               </p>
