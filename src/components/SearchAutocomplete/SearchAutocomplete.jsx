@@ -1,15 +1,28 @@
 import { useState } from "react";
 import "./searchautocomplete.css";
+import User from "./User";
 
 const SearchAutocomplete = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   async function fetchUsers(username) {
-    const response = await fetch(
-      `https://dummyjson.com/users/search?q=${username}`
-    );
-    const data = await response.json();
-    console.log(data);
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `https://dummyjson.com/users/search?q=${username}`
+      );
+      const data = await response.json();
+      if (data) {
+        console.log(data.users);
+        setUserData(data.users);
+        setLoading(false);
+      }
+    } catch (e) {
+      console.error(e);
+      setLoading(false);
+    }
   }
 
   const handleSearch = () => {
@@ -28,7 +41,10 @@ const SearchAutocomplete = () => {
         />
         <button onClick={handleSearch}>Search User</button>
       </div>
-      <div className="user-container"></div>
+      <p>{loading ? "Searching..." : null}</p>
+      <div className="user-container">
+        {userData ? <User users={userData} /> : "No User Found"}
+      </div>
     </div>
   );
 };
