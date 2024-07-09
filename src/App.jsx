@@ -1,5 +1,6 @@
-import './App.css'
-import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
+import "./App.css";
+import SearchAutocomplete from "./components/SearchAutocomplete/SearchAutocomplete";
+// import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
 // import Modal from './components/ModalBox/Modal'
 // import Tab from './components/Tabs/Tab'
 // import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator'
@@ -16,7 +17,6 @@ import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileF
 // import LoadMore from './components/LoadMore/LoadMore'
 
 function App() {
-
   return (
     <>
       {/* <Accordion />
@@ -31,11 +31,11 @@ function App() {
       <SwitchThemes />
       <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />  
       <Tab /> 
-      <Modal />*/}
-      <GithubProfileFinder />
-
+      <Modal />
+      <GithubProfileFinder />*/}
+      <SearchAutocomplete />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

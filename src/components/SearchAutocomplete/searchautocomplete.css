@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 550px;
+  margin: 10px auto;
+}
+
+.input-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+input {
+  width: inherit;
+  padding: 5px 10px;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid pink;
+  font-size: 20px;
+}
+
+button {
+  background: pink;
+  color: black;
+  border: 2px solid black;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  width: 200px;
+  &:hover {
+    cursor: pointer;
+    background: rgb(253, 134, 154);
+  }
+}
