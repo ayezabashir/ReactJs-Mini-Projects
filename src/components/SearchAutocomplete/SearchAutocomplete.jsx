@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Suggestions from "./Suggestions";
 
 const SearchAutocomplete = () => {
   const [loading, setLoading] = useState(false);
@@ -47,15 +48,28 @@ const SearchAutocomplete = () => {
 
   console.log(userData, filteredUser);
 
+  function handleClick(e) {
+    setShowDropdown(false);
+    setSearchParam(e.target.innerText);
+    setFilteresUser([]);
+  }
+
   return (
     <div className="search-container">
-      <input
-        value={searchParam}
-        onChange={handleChange}
-        type="text"
-        name="search-user"
-        placeholder="Search User..."
-      />
+      {loading ? (
+        <h1>Loading data...</h1>
+      ) : (
+        <input
+          value={searchParam}
+          onChange={handleChange}
+          type="text"
+          name="search-user"
+          placeholder="Search User..."
+        />
+      )}
+      {showDropdown && (
+        <Suggestions handleClick={handleClick} data={filteredUser} />
+      )}
     </div>
   );
 };
