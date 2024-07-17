@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const UseFetchCustomHook = (url, options = {}) => {
+const useFetch = (url, options = {}) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -9,7 +9,7 @@ const UseFetchCustomHook = (url, options = {}) => {
     try {
       const response = await fetch(url, { ...options });
       if (!response.ok) throw new Error(response.status);
-      const result = response.json();
+      const result = await response.json();
       setData(result);
       setLoading(false);
     } catch (e) {
@@ -24,4 +24,4 @@ const UseFetchCustomHook = (url, options = {}) => {
   return { data, loading };
 };
 
-export default UseFetchCustomHook;
+export default useFetch;

@@ -1,5 +1,5 @@
 import "./App.css";
-import UseFetchCustomHook from "./components/UseFetchCustomHook/UseFetchCustomHook";
+import useFetch from "./components/UseFetchCustomHook/useFetch";
 // import SearchAutocomplete from "./components/SearchAutocomplete/SearchAutocomplete";
 // import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
 // import Modal from './components/ModalBox/Modal'
@@ -35,7 +35,7 @@ function App() {
       <Modal />
       <GithubProfileFinder />
       <SearchAutocomplete /> */}
-      <UseFetchCustomHook />
+      <useFetch />
     </>
   );
 }
