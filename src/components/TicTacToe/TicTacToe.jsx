@@ -39,6 +39,11 @@ const TicTacToe = () => {
     setSquares(copySquares);
   }
 
+  function handleRestart() {
+    setIsXTurn(true);
+    setSquares(Array(9).fill(""));
+  }
+
   useEffect(() => {
     if (!getWinner(squares) && squares.every((item) => item !== "")) {
       setSquares(`This is a draw! Restart Game`);
@@ -67,6 +72,9 @@ const TicTacToe = () => {
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
       <h1>{status}</h1>
+      <button onClick={handleRestart} className="btn-start">
+        Restart Game
+      </button>
     </div>
   );
 };

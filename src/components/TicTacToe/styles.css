@@ -21,3 +21,12 @@
   margin-top: -1px;
   cursor: pointer;
 }
+.btn-start {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+}
