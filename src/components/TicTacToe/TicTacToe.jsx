@@ -1,16 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Square from "./Square";
 import "./styles.css";
 const TicTacToe = () => {
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
+  const [status, setStatus] = useState("");
+
+  function getWinner(squares) {
+    const winPattern = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+      [0, 3, 6],
+      [1, 4, 7],
+    ];
+    for (let i = 0; i < winPattern.length; i++) {
+      const [x, y, z] = winPattern[i];
+
+      if (
+        squares[x] &&
+        squares[x] === squares[y] &&
+        squares[x] === squares[z]
+      ) {
+        return squares[x];
+      }
+    }
+    return null;
+  }
 
   function handleClick(getCurrentSquare) {
     let copySquares = [...squares];
+    if (getWinner(copySquares) || copySquares[getCurrentSquare]) return;
     copySquares[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(copySquares);
   }
+
+  useEffect(() => {
+    if (!getWinner(squares) && squares.every((item) => item !== "")) {
+      setSquares(`This is a draw! Restart Game`);
+    } else if (getWinner(squares)) {
+      setStatus(`${getWinner(squares)} won`);
+    } else {
+      setStatus(`Next Turn: ${isXTurn ? "X" : "O"}`);
+    }
+  }, [isXTurn, squares]);
 
   return (
     <div className="tic-tac-toe-container">
@@ -29,6 +66,7 @@ const TicTacToe = () => {
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
+      <h1>{status}</h1>
     </div>
   );
 };
