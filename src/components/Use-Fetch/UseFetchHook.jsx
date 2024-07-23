@@ -16,6 +16,7 @@ const UseFetchHook = () => {
     >
       <h1>useFetch Hook</h1>
       {loading ? <h2>Fetching products...</h2> : null}
+      {error ? <h2>{error}</h2> : null}
       {data && data.products && data.products.length
         ? data.products.map((item) => <p key={item.key}>{item.title}</p>)
         : null}
