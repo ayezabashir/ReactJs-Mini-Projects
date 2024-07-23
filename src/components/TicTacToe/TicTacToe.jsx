@@ -46,7 +46,7 @@ const TicTacToe = () => {
 
   useEffect(() => {
     if (!getWinner(squares) && squares.every((item) => item !== "")) {
-      setSquares(`This is a draw! Restart Game`);
+      setStatus(`This is a draw! Restart Game`);
     } else if (getWinner(squares)) {
       setStatus(`${getWinner(squares)} won`);
     } else {
