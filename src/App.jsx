@@ -1,5 +1,6 @@
 import "./App.css";
-import TicTacToe from "./components/TicTacToe/TicTacToe";
+import UseFetchHook from "./components/Use-Fetch/UseFetchHook";
+// import TicTacToe from "./components/TicTacToe/TicTacToe";
 // import SearchAutocomplete from "./components/SearchAutocomplete/SearchAutocomplete";
 // import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
 // import Modal from './components/ModalBox/Modal'
@@ -34,8 +35,9 @@ function App() {
       <Tab /> 
       <Modal />
       <GithubProfileFinder />
-      <SearchAutocomplete /> */}
-      <TicTacToe />
+      <SearchAutocomplete />
+      <TicTacToe /> */}
+      <UseFetchHook />
     </>
   );
 }
