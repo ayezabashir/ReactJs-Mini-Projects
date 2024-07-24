@@ -1,4 +1,5 @@
 import "./App.css";
+import UseOnClickOutside from "./components/ClickOutside/UseOnClickOutside";
 import UseFetchHook from "./components/Use-Fetch/UseFetchHook";
 // import TicTacToe from "./components/TicTacToe/TicTacToe";
 // import SearchAutocomplete from "./components/SearchAutocomplete/SearchAutocomplete";
@@ -36,8 +37,9 @@ function App() {
       <Modal />
       <GithubProfileFinder />
       <SearchAutocomplete />
-      <TicTacToe /> */}
-      <UseFetchHook />
+      <TicTacToe />
+      <UseFetchHook />  */}
+      <UseOnClickOutside />
     </>
   );
 }
