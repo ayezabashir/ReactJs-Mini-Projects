@@ -1,6 +1,7 @@
 import "./App.css";
-import UseOnClickOutside from "./components/ClickOutside/UseOnClickOutside";
-import UseFetchHook from "./components/Use-Fetch/UseFetchHook";
+import WindowResize from "./components/WindowResize/WindowResize";
+// import UseOnClickOutside from "./components/ClickOutside/UseOnClickOutside";
+// import UseFetchHook from "./components/Use-Fetch/UseFetchHook";
 // import TicTacToe from "./components/TicTacToe/TicTacToe";
 // import SearchAutocomplete from "./components/SearchAutocomplete/SearchAutocomplete";
 // import GithubProfileFinder from './components/GithubProfileFinder/GithubProfileFinder'
@@ -38,8 +39,9 @@ function App() {
       <GithubProfileFinder />
       <SearchAutocomplete />
       <TicTacToe />
-      <UseFetchHook />  */}
-      <UseOnClickOutside />
+      <UseFetchHook />  
+      <UseOnClickOutside /> */}
+      <WindowResize />
     </>
   );
 }
